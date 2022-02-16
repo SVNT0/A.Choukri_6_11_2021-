@@ -10,7 +10,7 @@ const sauceRoutes = require('./routes/sauce');
 const userRoutes = require('./routes/user');
 
 // Connection au serveur mongo
-mongoose.connect(process.env.SECRET_DB,
+mongoose.connect(process.env.DB_MONGO,
   
     { useNewUrlParser: true,
     useUnifiedTopology: true })
