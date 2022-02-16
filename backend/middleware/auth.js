@@ -1,5 +1,7 @@
 // Récupération du modèle jsonwebtoken
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
+
 
 module.exports = (req, res, next) => {
   try {
@@ -7,7 +9,7 @@ module.exports = (req, res, next) => {
     //Recupération du token dans le header
     const token = req.headers.authorization.split(' ')[1];
     //Décodage du token
-    const decodedToken = jwt.verify(token, '${process.env.TOKEN}');
+    const decodedToken = jwt.verify(token, process.env.TOKEN);
     //Récupération de l'userID dans le token précédemment décodé
     const userId = decodedToken.userId;
 

@@ -1,7 +1,7 @@
 // Création du type de données de la base concernant les Sauces
-
+// importation package de Mongoose
 const mongoose = require('mongoose');
-
+// Défintion du schéma de mongoose en JSON (string, number ou array)
 const sauceSchema = mongoose.Schema({
     userId: { type: String, require: true },
     name: { type: String, require: true },
